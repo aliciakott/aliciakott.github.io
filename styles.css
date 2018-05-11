@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(9, 26, 34);
+  font-family: Montserrat;
+}
+
+.outer-box {
+  background-color: #eee;
+  width: 95vw;
+  max-width: 900px;
+  margin: auto;
+}
+
+.outer-box,
+.inner-box,
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.header {
+  background-color: black;
+  color: #eee;
+  text-align: right;
+  text-transform: uppercase;
+  padding: 5px 15px 15px 0px;
+}
+
+h1,
+h2 {
+  font-family: Playfair Display;
+  font-weight: 400;
+}
+
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.banner {
+  height: 40vw;
+  background: url('images/banner.jpg') no-repeat bottom right;
+  background-size: cover;
+  transition: width 1s, height 1s;
+}
+
+.about,
+.inner-box {
+  padding: 10px;
+}
+
+.about h4,
+.featured,
+.featured h4 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+header,
+.header,
+.banner,
+.about,
+.featured,
+.project {
+  width: 100%;
+}
+
+.project {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 5px 0;
+}
+
+img {
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+
+img:hover {
+  filter: grayscale(0%);
+}
+
+@media screen and (min-width: 810px) {
+  h1 {
+    font-size: 45px;
+  }
+  .banner,
+  .about {
+    width: 50%;
+  }
+  .banner {
+    height: auto;
+  }
+  .project {
+    width: 32%;
+  }
+}
